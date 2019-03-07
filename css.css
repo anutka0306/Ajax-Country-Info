@@ -1,0 +1,9 @@
+.city-select{
+  display:none;
+}
+.country-info{
+  display:none;
+  margin-top:30px;
+  padding-left:30px;
+  padding-right:30px;
+}
