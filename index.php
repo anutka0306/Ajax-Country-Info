@@ -37,7 +37,7 @@
     <div class="col-sm-8 country-info">
       <h3>Country Information</h3>
       <div id="coutryInfo"></div>
-      <div id="population"></div>
+      <div id="population" class="city-population"></div>
 
     </div>
   </div>
@@ -55,6 +55,7 @@ $(function(){
   var code = $(this).val();
   $('#city').load('ajax.php', {code: code}, function(){
  $('.city-select').fadeIn('slow');
+$('.city-population').fadeOut('fast');
 
   });
   $('#coutryInfo').load('ajax.php',{code2: code});
@@ -66,6 +67,7 @@ $(function(){
    var cityId = $(this).val();
    $('#population').load('ajax.php', {cityId: cityId}, function(){
      $('.country-info').fadeIn('slow');
+     $('.city-population').fadeIn('slow');
    });
  });
 
