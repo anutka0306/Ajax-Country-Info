@@ -11,12 +11,13 @@
 
 <body>
 <div class="container">
+  <h3>Choose any country and city and get information <span class="badge badge-success"> Without reloading the page</span></h3>
   <form>
 <div class="form-group">
   <label for="name" class="col-sm-2 control-label">Country</label>
   <div class="col-sm-6">
     <select class="form-control" name="country" id="country">
-      <option disabled selected>Choose you country</option>
+      <option disabled selected>Choose country</option>
       <?php foreach($countries as $country): ?>
       <option value="<?=$country['Code']?>"><?=$country['Name']?></option>
     <?php endforeach; ?>
@@ -34,8 +35,8 @@
 </div>
 </form>
   <div class="row">
-    <div class="col-sm-8 country-info">
-      <h3>Country Information</h3>
+    <div class="col-sm-8 country-info shadow-lg p-3 mb-5 bg-white rounded">
+      <h3 class="text-primary">Country Information</h3>
       <div id="coutryInfo"></div>
       <div id="population" class="city-population"></div>
 
